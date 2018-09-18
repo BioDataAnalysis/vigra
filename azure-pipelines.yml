@@ -21,7 +21,7 @@ jobs:
           echo "Will create a conda environment" || exit 1
           conda create --quiet --yes --mkdir --prefix $AGENT_WORKFOLDER/envs/vigra --channel conda-forge python=$(PY_VERSION) || exit 1
           echo "Will activate the conda environment" || exit 1
-          conda activate $AGENT_WORKFOLDER/envs/vigra
+          source $CONDA/bin/activate $AGENT_WORKFOLDER/envs/vigra
           echo "Will start the conda install of prerequisites" || exit 1
           conda install --quiet --yes --mkdir --channel conda-forge jpeg libpng libtiff hdf5 fftw boost boost-cpp numpy nose || exit 1
           printenv || exit 1
@@ -50,7 +50,7 @@ jobs:
           echo "Will create a conda environment" || exit 1
           conda create --quiet --yes --mkdir --prefix $AGENT_WORKFOLDER/envs/vigra --channel conda-forge python=$(PY_VERSION) || exit 1
           echo "Will activate the conda environment" || exit 1
-          conda activate $AGENT_WORKFOLDER/envs/vigra
+          source $CONDA/bin/activate $AGENT_WORKFOLDER/envs/vigra
           echo "Will start the conda install of prerequisites" || exit 1
           conda install --quiet --yes --mkdir --channel conda-forge jpeg libpng libtiff hdf5 fftw boost boost-cpp numpy nose || exit 1
           printenv || exit 1
@@ -79,7 +79,7 @@ jobs:
           echo "Will create a conda environment" || exit 1
           conda create --quiet --yes --mkdir --prefix %AGENT_WORKFOLDER%\envs\vigra --channel conda-forge python=$(PY_VERSION) || exit 1
           echo "Will activate the conda environment" || exit 1
-          conda activate %AGENT_WORKFOLDER%\envs\vigra
+          activate %AGENT_WORKFOLDER%\envs\vigra
           echo "Will start the conda install of prerequisites" || exit 1
           conda install --quiet --yes --mkdir --channel conda-forge jpeg libpng libtiff hdf5 fftw boost boost-cpp numpy nose || exit 1
           set
