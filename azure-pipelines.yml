@@ -16,8 +16,6 @@ jobs:
     steps:
       - task: CondaEnvironment@1
         inputs:
-          createCustomEnvironment: true
-          environmentName: 'vigra'
           installOptions: '--prefix $(Agent.WorkFolder)/conda'
           createOptions: '--prefix $(Agent.WorkFolder)/conda'
           packageSpecs: 'python=$(PY_VERSION)'
@@ -46,8 +44,6 @@ jobs:
     steps:
       - task: CondaEnvironment@1
         inputs:
-          createCustomEnvironment: true
-          environmentName: 'vigra'
           installOptions: '--prefix $(Agent.WorkFolder)/conda'
           createOptions: '--prefix $(Agent.WorkFolder)/conda'
           packageSpecs: 'python=$(PY_VERSION)'
@@ -76,8 +72,6 @@ jobs:
     steps:
       - task: CondaEnvironment@1
         inputs:
-          createCustomEnvironment: true
-          environmentName: 'vigra'
           installOptions: '--prefix $(Agent.WorkFolder)\conda'
           createOptions: '--prefix $(Agent.WorkFolder)\conda'
           packageSpecs: 'python=$(PY_VERSION)'
