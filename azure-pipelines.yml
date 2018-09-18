@@ -18,8 +18,8 @@ jobs:
         inputs:
           createCustomEnvironment: true
           environmentName: 'vigra'
-          installOptions: '--prefix $(AGENT_WORKFOLDER)/conda'
-          createOptions: '--prefix $(AGENT_WORKFOLDER)/conda'
+          installOptions: '--prefix $(Agent.WorkFolder)/conda'
+          createOptions: '--prefix $(Agent.WorkFolder)/conda'
           packageSpecs: 'python=$(PY_VERSION)'
           updateConda: true
       - script: |
@@ -48,8 +48,8 @@ jobs:
         inputs:
           createCustomEnvironment: true
           environmentName: 'vigra'
-          installOptions: '--prefix $(AGENT_WORKFOLDER)/conda'
-          createOptions: '--prefix $(AGENT_WORKFOLDER)/conda'
+          installOptions: '--prefix $(Agent.WorkFolder)/conda'
+          createOptions: '--prefix $(Agent.WorkFolder)/conda'
           packageSpecs: 'python=$(PY_VERSION)'
           updateConda: true
       - script: |
@@ -78,8 +78,8 @@ jobs:
         inputs:
           createCustomEnvironment: true
           environmentName: 'vigra'
-          installOptions: '--prefix $(AGENT_WORKFOLDER)\conda'
-          createOptions: '--prefix $(AGENT_WORKFOLDER)\conda'
+          installOptions: '--prefix $(Agent.WorkFolder)\conda'
+          createOptions: '--prefix $(Agent.WorkFolder)\conda'
           packageSpecs: 'python=$(PY_VERSION)'
           updateConda: true
       - script: |
