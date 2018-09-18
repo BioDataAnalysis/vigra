@@ -24,7 +24,8 @@ jobs:
           source $CONDA/bin/activate $AGENT_WORKFOLDER/envs/vigra || exit 1
           echo "Will start the conda install of prerequisites" || exit 1
           conda install --quiet --yes --mkdir --channel conda-forge jpeg libpng libtiff hdf5 fftw boost boost-cpp numpy nose || exit 1
-          printenv || exit 1
+          printenv
+          find $AGENT_WORKFOLDER/envs/vigra -name '*.so' -o -name '*.la' -o -name '*.a'
           mkdir build || exit 1
           cd build || exit 1
           echo "Will start the cmake configuration" || exit 1
@@ -53,7 +54,8 @@ jobs:
           source $CONDA/bin/activate $AGENT_WORKFOLDER/envs/vigra || exit 1
           echo "Will start the conda install of prerequisites" || exit 1
           conda install --quiet --yes --mkdir --channel conda-forge jpeg libpng libtiff hdf5 fftw boost boost-cpp numpy nose || exit 1
-          printenv || exit 1
+          printenv
+          find $AGENT_WORKFOLDER/envs/vigra -name '*.dylib' -o -name '*.la' -o -name '*.a'
           mkdir build || exit 1
           cd build || exit 1
           echo "Will start the cmake configuration" || exit 1
