@@ -18,6 +18,7 @@ jobs:
         inputs:
           createCustomEnvironment: true
           environmentName: 'vigra'
+          installOptions: '--prefix $(AGENT_WORKFOLDER)'
           packageSpecs: 'python=$(PY_VERSION)'
           updateConda: true
       - script: |
